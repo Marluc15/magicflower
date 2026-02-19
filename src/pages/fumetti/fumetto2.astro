@@ -8,7 +8,7 @@ import Layout from "../../components/Layout.astro";
   <p>Descrizione del fumetto (opzionale)…</p>
 
   <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
-    <img src="/fumetti/2CAP.jpg" alt="Fumetto 2 - Pagina 1" style="width:100%; max-width: 900px; margin: 0 auto; display:block;">
-    <img src="/fumetti/1-2 web.jpg" alt="Fumetto 2 - Pagina 2" style="width:100%; max-width: 900px; margin: 0 auto; display:block;">
+    <img src={'${Astro.site.pathname}/2CAP.jpg'} alt="Fumetto 2 - Pagina 1" style="width:100%; max-width: 900px; margin: 0 auto; display:block;">
+    <img src={'${Astro.site.pathname}/1-2 web.jpg'} alt="Fumetto 2 - Pagina 2" style="width:100%; max-width: 900px; margin: 0 auto; display:block;">
   </div>
 </Layout>
