@@ -2,31 +2,32 @@
 import Layout from "../../components/Layout.astro";
 import ComicCard from "../../components/ComicCard.astro";
 
+// Usa Astro.site.pathname come prefisso (es: "/magicflower")
+const base = Astro.site.pathname;
+
 const fumetti = [
   {
     titolo: "Fumetto 1",
-    cover: "/fumetti/questione.jpg",
-   link: `${Astro.site.pathname}/fumetti/fumetto1`,
+    cover: `${base}/fumetti/questione.jpg`,
+    link: `${base}/fumetti/fumetto1`,
   },
   {
     titolo: "Fumetto 2",
-    cover: "/fumetti/questione2.jpg",
-    link: `${Astro.site.pathname}/fumetti/fumetto2`,
+    cover: `${base}/fumetti/questione2.jpg`,
+    link: `${base}/fumetti/fumetto2`,
   }
 ];
 ---
 
-<Layout title="I miei fumetti - Eleonora">
-
+<Layout title="I miei fumetti – Eleonora Mariani">
   <h1>I miei fumetti</h1>
 
   <div style="
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     margin-top: 20px;
   ">
-   {fumetti.map((f) => <ComicCard {...f} />)}
+    {fumetti.map((f) => <ComicCard {...f} />)}
   </div>
-
 </Layout>

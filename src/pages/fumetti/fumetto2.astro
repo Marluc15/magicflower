@@ -1,5 +1,8 @@
 ---
 import Layout from "../../components/Layout.astro";
+
+// Prefisso base (es: "/magicflower")
+const base = Astro.site.pathname;
 ---
 
 <Layout title="Fumetto 2 – Eleonora Mariani">
@@ -8,7 +11,15 @@ import Layout from "../../components/Layout.astro";
   <p>Descrizione del fumetto (opzionale)…</p>
 
   <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
-    <img src={'${Astro.site.pathname}/2CAP.jpg'} alt="Fumetto 2 - Pagina 1" style="width:100%; max-width: 900px; margin: 0 auto; display:block;">
-    <img src={'${Astro.site.pathname}/1-2 web.jpg'} alt="Fumetto 2 - Pagina 2" style="width:100%; max-width: 900px; margin: 0 auto; display:block;">
+    <img
+      src={`${base}/fumetti/2CAP.jpg`}
+      alt="Fumetto 2 - Pagina 1"
+      style="width:100%; max-width: 900px; margin: 0 auto; display:block;"
+    >
+    <img
+      src={`${base}/fumetti/1-2 web.jpg`}
+      alt="Fumetto 2 - Pagina 2"
+      style="width:100%; max-width: 900px; margin: 0 auto; display:block;"
+    >
   </div>
 </Layout>
