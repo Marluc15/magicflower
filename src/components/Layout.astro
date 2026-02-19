@@ -70,9 +70,9 @@ const { title = "Portfolio" } = Astro.props;
 
 <body>
   <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/fumetti">Fumetti</a>
+    <nav>    
+		<a href={`${Astro.site.pathname}/`}>Home</a>
+		<a href={`${Astro.site.pathname}/fumetti`}>Fumetti</a>
     </nav>
   </header>
 
