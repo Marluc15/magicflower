@@ -2,6 +2,7 @@
 import Layout from "../../components/Layout.astro";
 import ComicCard from "../../components/ComicCard.astro";
 
+// Usa Astro.site.pathname come prefisso (es: "/magicflower")
 const base = Astro.site.pathname;
 
 const fumetti = [
@@ -21,25 +22,12 @@ const fumetti = [
 <Layout title="I miei fumetti – Eleonora Mariani">
   <h1>I miei fumetti</h1>
 
-<div class="grid">
-  {fumetti.map((f, i) => (
-    <ComicCard
-      {...f}
-      style={`--delay: ${i * 0.15}s`}
-    />
-  ))}
-</div>
-</Layout>
-
-<style>
-  .grid {
+  <div style="
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     margin-top: 20px;
-  }
-</style>
-``
-
-
-
+  ">
+    {fumetti.map((f) => <ComicCard {...f} />)}
+  </div>
+</Layout>

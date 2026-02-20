@@ -1,0 +1,38 @@
+Per ogni nuovo fumetto:
+
+- aggiungere la copertina in public/fumetti/
+- creare una pagina fumettoN.astro
+- aggiungere un nuovo oggetto nell’array fumetti
+
+È un sistema scalabile, semplice e elegante.
+
+
+python -m http.server 5500
+
+- nel path src/pages/ ho solamente il file index.astro in cui si trova la home page
+- nel path src/pages/fumetti ho:
+	- il file index.astro contenente le copertine dei vari fumetti
+	- N file fumettoN.astro contenenti le immagini dei vari fumetti
+- nel path src/components ho:	
+	- il file comicard.astro gestisce il layout delle copertine
+	- il file layout.astro gestisce gli altri layout
+	
+🚀 Idee per scalare 
+Se in futuro i fumetti diventano tanti:
+
+Route dinamiche con un solo file:
+src/pages/fumetti/[slug].astro
+Così non si devono creare fumettoN.astro per ognuno.
+
+Content Collections di Astro per gestire i metadati (titolo, cover, descrizione) in Markdown/YAML, e generare automaticamente la lista nella griglia.
+
+Per ogni modifica:
+- npm run build (facoltativo, per verifica locale)
+
+- Push + deploy (invia il codice su github)
+git add .
+git commit -m "commento a piacere"
+git push
+se dovesse servire il RUN Workflow dal sito github:
+https://github.com/Marluc15/magicflower --> Action --> Deploy Astro to GitHub Pages (menu a sx) --> Run workflow (bottone a sx) 
+ 
