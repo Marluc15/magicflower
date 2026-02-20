@@ -4,12 +4,20 @@ import Layout from "../components/Layout.astro";
 
 <Layout title="Homepage – Eleonora Mariani">
   <h1>Eleonora Mariani – Fumetti & Illustrazioni</h1>
-  <p>Ciao! Questo è il mio portfolio di fumetti.
+  <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+    <img
+      src={`${Astro.site.pathname}/fumetti/Ele.jpg`}
+      alt="Ele"
+      style="width:100%; max-width: 300px; margin: 0 auto; display:block;"
+    >
+  </div> 
+  <p>Ciao! Questo è il mio portfolio di fumetti<br><br>
  Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum 
  Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum 
  Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum 
  Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum 
  Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum Ipse Lorum 
   </p>
+ 
   <p><a href={`${Astro.site.pathname}/fumetti`}>Vai ai fumetti →</a></p>
 </Layout>
